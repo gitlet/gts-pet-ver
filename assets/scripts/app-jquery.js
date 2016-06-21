@@ -15,6 +15,7 @@ $(document).ready(function () {
     });
 
     $('.header .right-menu-handle').click(function () {
-        $('.body').toggleClass('r-toggle');
+        // $('.toggle-left').toggleClass('r-toggle');
+        $('.toggle-left').toggleClass('r-toggle');
     });
 });

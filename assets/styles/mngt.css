@@ -1,0 +1,7 @@
+body {
+    background: linear-gradient(rgba(3, 10, 21, 0.9), rgb(17, 36, 107));
+}
+.mngt {list-style-type: none}
+.mngt .mngt-items {
+    display: inline-block;
+}

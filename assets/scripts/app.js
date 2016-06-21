@@ -19,5 +19,10 @@ angular
                 url: '/',
                 templateUrl: 'templates/home.html',
                 controller: 'homeCtrl'
+            })
+            .state('mngt', {
+                url: '/mngt',
+                templateUrl: 'templates/mngt.html',
+                controller: 'mngtCtrl'
             });
     }]);
