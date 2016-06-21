@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Geomama tracking solutions</title>
+      <!-- [font] -->
+    <link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css' />
+      <!--[[font-awesome-->
+      <link rel="stylesheet" href="assets/styles/font-awesome-4.6.3/css/font-awesome.min.css">
+    <!-- [header.css] -->
+    <link rel="stylesheet" href="assets/styles/header.css">
+    <!-- [footer.css] -->
+    <link rel="stylesheet" href="assets/styles/footer.css">
+    <!-- [left-menu.css] -->
+    <!--<link rel="stylesheet" href="assets/styles/left-menu.css">-->
+    <!-- [master.css] -->
+    <link rel="stylesheet" href="assets/styles/master.css" media="screen" title="no title" charset="utf-8">
+      <!-- [angularjs] -->
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+      <!-- [angular-ui-router] -->
+    <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+      <!-- [jquery] -->
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+    <!-- [mapstraction ]-->
+    <script src="http://openlayers.org/api/OpenLayers.js"></script>
+    <script src="http://mapstraction.com/mxn/build/latest/mxn.js?(openlayers)" type="text/javascript"></script>
+      <!-- [app-jquery.js] -->
+    <script src="assets/scripts/app-jquery.js"></script>
+      <!-----[[[app.js]]]------>
+      <script src="assets/scripts/app.js"></script>
+      <!-- [mapCtrl.js] -->
+      <script src="assets/controllers/mapCtrl.js"></script>
+  </head>
+  <body ng-app="gts" class="body toggle">
+    <!--<input type="text" name="" value="" ng-model="name">-->
+    <!--<h1>Hello {{name}}</h1>-->
+
+    <header ng-include="'templates/header.html'"></header>
+
+    <div class="left-menu" ng-include="'templates/left-menu.html'"></div>
+    <div class="container sliding" ui-view></div>
+    <div class="right-menu r-toggle" ng-include="'templates/right-menu.html'"></div>
+
+    <!-- [mapstraction map] -->
+    <div id="map"></div>
+    <script>
+      var map = new mxn.Mapstraction('map', 'openlayers');
+      var latlon = new mxn.LatLonPoint(25.2048, 55.2708);
+
+      map.setCenterAndZoom(latlon, 10);
+    </script>
+
+    <footer ng-include="'templates/footer.html'"></footer>
+  </body>
+</html>

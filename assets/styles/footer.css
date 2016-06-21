@@ -1,0 +1,12 @@
+.footer {
+    clear: both;
+    background: linear-gradient(rgba(23, 79, 121, 0.87),rgba(27, 102, 179, 0.84));
+    position: relative;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+}
+.footer img {
+    height:48px;
+}
